@@ -17,6 +17,7 @@ function changeColor() {
     author.style.color = `#${randomColorGenerator}`
 }
 
+// generates random quote
 function randomQuote() {
     fetch('https://api.quotable.io/random').then(res => res.json()).then(result => {
         quoteText.innerHTML = `<i class="fa-solid fa-quote-left"></i> ${result.content}`
@@ -24,11 +25,13 @@ function randomQuote() {
     })
 }
 
+// text-to-speech quote on button click
 textToSpeechButton.addEventListener('click', () => {
     let speech = new SpeechSynthesisUtterance(`${quoteText.innerText} by ${author.innerHTML}`)
     speechSynthesis.speak(speech)
 })
 
+// tweets quote
 twitterButton.addEventListener('click', () => {
     let tweetURL = `https://twitter.com/intent/tweet?url=${quoteText.innerText}`
     window.open(tweetURL, "_blank")
@@ -38,4 +41,3 @@ newQuoteButton.addEventListener('click', changeColor)
 newQuoteButton.addEventListener('click', randomQuote)
 changeColor()
 randomQuote()
-
