@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#quote-box {
+    font-size: 30px;
+    width: 550px;
+    min-height: 300px;
+    padding: 3rem 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25);
+    text-align: center;
+    position: relative;
+}
+
+p {
+    transition-property: color;
+    transition-duration: 2s;
+}
+
+body, #quote-box, #new-quote, #tweet-quote, #speech {
+    transition-property: background-color;
+    transition-duration: 2s;
+}
+
+#text {
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    font-size: 1.7rem;
+}
+
+#author {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+}
+
+#speech {
+    height: 38px;
+    left: 16%;
+    bottom: 8%;
+}
+
+#tweet-quote {
+    height: 38px;
+    left: 8%;
+    bottom: 8%;
+}
+
+#new-quote {
+    padding: 10px;
+    font-size: 16px;
+    width: 7rem;
+    right: 8%;
+    bottom: 8%;
+}
+
+ul {
+    list-style: none;
+    display: inline-flex;
+    margin-top: 2rem;
+}
+
+i {
+    border: none;
+    padding: 12px;
+}
+
+
+@media (max-width: 420px) {
+    #quote-box {
+        width: 87vw;
+        min-height: 60vh;
+    }
+    #text {
+        font-size: 75%;
+    }
+
+    #new-quote {
+        right: 8%;
+        bottom: 10%;
+    }
+
+    #tweet-quote {
+        left: 8%;
+        bottom: 10%;
+    }
+
+    #speech {
+        left: 21.5%;
+        bottom: 10%;
+    }
+}
