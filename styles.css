@@ -58,6 +58,7 @@ button {
     border-radius: 5px;
     color: white;
     position: absolute;
+    font-family: 'Roboto Mono', monospace;
 }
 
 #speech {
